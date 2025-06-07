@@ -1,0 +1,1 @@
+(async e=>{let s,a;async function t(t){importScripts(t),{vision:s,hands:a}=await e.getHandPoser()}e.onmessage=async({data:{scripts:s,video:o,ping:c}})=>{c&&e.postMessage({ping:c}),s&&await t(s),o&&a&&e.postMessage({tracked:a.detectForVideo(o,performance.now())})}})(self);
