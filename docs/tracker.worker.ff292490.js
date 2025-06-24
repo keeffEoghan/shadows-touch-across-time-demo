@@ -1,0 +1,1 @@
+(async s=>{let a;async function e(e,n){importScripts(e),{track:a}=await s.getHandPoser(n)}s.onmessage=async({data:{scripts:n,video:t,ping:o,poser:i}})=>{if(o&&s.postMessage({ping:o}),n&&await e(n,i),t&&a){let{landmarksNDC:e,meanNDC:n,boxesNDC:o}=a(t);s.postMessage({pose:{landmarksNDC:e,meanNDC:n,boxesNDC:o}})}}})(self);
